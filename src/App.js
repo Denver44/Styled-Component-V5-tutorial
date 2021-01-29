@@ -1,10 +1,10 @@
 import "./App.css";
-import State3 from "./Components/USESTATE/State3.jsx";
+import Effect4 from "./Components/USEEFFECT/Effect4.jsx";
 
 function App() {
   return (
     <div className="App">
-      <State3 />
+      <Effect4 />
     </div>
   );
 }

@@ -1,4 +1,3 @@
-import "./App.css";
 import Effect4 from "./Components/USEEFFECT/Effect4.jsx";
 
 function App() {

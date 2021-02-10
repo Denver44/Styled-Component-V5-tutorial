@@ -1,9 +1,9 @@
-import Effect4 from "./Components/USEEFFECT/Effect4.jsx";
+import Memo from "./Components/USEMEMO/Memo.jsx";
 
 function App() {
   return (
     <div className="App">
-      <Effect4 />
+      <Memo />
     </div>
   );
 }

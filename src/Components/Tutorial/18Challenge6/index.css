@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display:wght@400;600&family=Poller+One&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #d2dbdd;
+}
+button {
+  padding: 5px 8px;
+  font-family: "Playfair Display", serif;
+  text-transform: uppercase;
+  font-size: 25px;
+  letter-spacing: 1px;
+  font-weight: bolder;
+  color: white;
+  background-color: #b721ff;
+
+  border: 2px solid white;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 150px;
+  height: 50px;
+  margin-top: 15px;
+}
+.heading {
+  text-align: center;
+  display: block;
+}
+.center {
+  margin: 250px 49%;
+  width: 150px;
+  /* border: 2px solid; */
+}

@@ -1,14 +1,9 @@
-import Random from "./Components/CustomHooks/components/Random_V2";
-import Tag from "./Components/CustomHooks/components/Tag_V2";
-import "./Components/CustomHooks/styles/index.css";
+import ReactSelect from "./Components/React-Select/Static-React-Select/ReactSelect";
+
 function App() {
   return (
     <div className="App">
-      <h1>Random GIF Applications</h1>
-      <div className="main-container">
-        <Random />
-        <Tag />
-      </div>
+      <ReactSelect />
     </div>
   );
 }

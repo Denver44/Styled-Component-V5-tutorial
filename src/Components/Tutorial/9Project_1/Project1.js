@@ -1,6 +1,6 @@
-// Challenge
 import React from "react";
 import ReactDom from "react-dom";
+
 import "./index.css";
 
 let time = new Date(2020, 9, 9, 1);

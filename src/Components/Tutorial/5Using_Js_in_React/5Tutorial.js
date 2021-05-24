@@ -1,13 +1,13 @@
-// ----------------------06 Javascript Expression in Jsx --------------------------
+//  Javascript Expression in Jsx
 import React from "react";
 import ReactDom from "react-dom";
 
-// using curly barces we can use the javscript Expression in Jsx.
+// using curly braces we can use the javascript Expression in Jsx.
 // we cannot use statement here like if else while like this in it.
-const flname = "Durgesh Avan rai";
+const Name = "Denver";
 ReactDom.render(
   <>
-    <h1> Hello I m {flname} </h1>
+    <h1> Hello I m {Name} </h1>
     <p> My lucky number is {parseInt(100 * Math.random(100))} </p>
   </>,
   document.getElementById("root")

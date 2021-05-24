@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-//!Important =This is not a good way to upadte the value as if we call more than setcount it will only act for one thats why we dont use this method. see tut 2.
+// Important =This is not a good way to update the value as if we call more than setcount it will only act for one thats why we dont use this method. see tut 2.
 
 const State = () => {
   const [count, setcount] = useState(5);
@@ -10,7 +10,7 @@ const State = () => {
 
   const increment = () => {
     setcount(count + 1);
-    setcount(count + 1); // !Important both only work for one time the latest will work but the value will be chnaged for on time only not two times to as here count is 5 for both times thats why it work for ont time but if we take prevcount then we get diff result.
+    setcount(count + 1); // Important both only work for one time the latest will work but the value will be chnaged for on time only not two times to as here count is 5 for both times thats why it work for ont time but if we take prevcount then we get diff result.
   };
 
   return (

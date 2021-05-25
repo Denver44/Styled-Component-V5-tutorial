@@ -1,4 +1,4 @@
-import ReactSelect from "./Components/React-Select/Static-React-Select/ReactSelect";
+import ReactSelect from "./Components/React-select/ReacySelect";
 
 function App() {
   return (

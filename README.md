@@ -87,3 +87,16 @@
 - Updating state on a component causes the component to (almost) instantly re-render
 - state must be initialized when a component is created.
 - state can only be updated using the function 'setState' // IMPORTANT
+
+# Hooks System
+
+- useState -> Function that lets you use state in a functional component.
+- useEffect -> Function lets you use something like lifecycle methods in a functional component.
+- useRef -> Function that lets you create a 'ref' in a function component.
+
+- NOTE : Hooks are a way to write reusable code, instead of more classic techniques like inheritance.
+
+- We can create our custom hooks using the primitive hooks.
+
+- Primitive Hooks
+- useState , useEffect , useContext , useReducer , useCallback , useMemo , useRef , useImperativeHandle , useLayoutEffect , useDebugValue

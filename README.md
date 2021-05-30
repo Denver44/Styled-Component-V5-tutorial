@@ -61,3 +61,29 @@
 - Special dialect of JS (its not HTML!)
 - Browsers don't understand JSX code! We write JSX then run tools to turn it into normal JS.
 - Very Similar in form and Functions o HTML with a couple differences.
+
+# Props
+
+- System for passing data from a parent component to a child component
+- Goal is to customize or configure a child component
+
+# IMP
+
+- we can pass one component to another component also.
+- <ApprovalCard> <CommentDetail author="Alex" content="I like the subject" > </ApprovalCard>
+- we can destructure this in the same way we destructure the props.
+
+# Rules of CLass Components
+
+- Must be a Javascript Class
+- Must extend (Subclass) React.Component
+- Must define a 'render' method that returns some amount of JSX
+
+# RUles of State
+
+- Only usable with class components
+- you will confuse props with state
+- State is a JS Objects that contains data relevant to a component
+- Updating state on a component causes the component to (almost) instantly re-render
+- state must be initialized when a component is created.
+- state can only be updated using the function 'setState' // IMPORTANT

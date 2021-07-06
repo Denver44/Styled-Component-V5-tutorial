@@ -11,7 +11,7 @@
 - props is parameters we accept in our function component. and this props is object type.
 - onClick attribute can be added on any element of react.
 
-# The App Function is a React Component.
+# The App Function is a React Component
 
 - App component (Produces JSX and Handle user event) -> return JSX (set of instructions to tell React what content we want to show on the screen)
 
@@ -100,3 +100,25 @@
 
 - Primitive Hooks
 - useState , useEffect , useContext , useReducer , useCallback , useMemo , useRef , useImperativeHandle , useLayoutEffect , useDebugValue
+
+# The 'UseEffect' Hook
+
+- Allows function components to use something like lifecycle methods
+- We configure the hook to run some code auto in one of three scenarios
+- 1. When the component is rendered for the first time only.
+- 2. When the component is rendered for the first time and whenever it re-renders
+- 3. When the component is rendered for the first time and whenever it renders and some piece of data has changed.
+
+- cleanup function in useEffect is used to return something after initial render or re=render . it will be return for first render and after than first Cleanup then useEffect called and setup cleanup for return
+
+# USeEffct Second Argument
+
+- [] -> Run at initial render
+- ...nothing -> Run at initial render and Run after every render
+- [data] Run at initial render and Run after every re-render if data has changed since last render.
+
+# XSS Attack
+
+<span dangerouslySetInnerHTML={{ __html: res.snippet }}></span>
+
+- Don't use this unless the sources is trusted

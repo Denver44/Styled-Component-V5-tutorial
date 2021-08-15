@@ -1,18 +1,16 @@
 import React, { useEffect, useState } from "react";
 
 const Effect2 = () => {
-  const [width, setwidth] = useState(window.innerWidth);
+  const [width, setWidth] = useState(window.innerWidth);
 
-  const handlereszie = () => {
-    setwidth(window.innerWidth);
+  const handleResize = () => {
+    setWidth(window.innerWidth);
   };
 
-  // We should remove the listener
-
   useEffect(() => {
-    window.addEventListener("resize", handlereszie);
+    window.addEventListener("resize", handleResize);
     return () => {
-      window.removeEventListener("resize");
+      window.removeEventListener("resize"); // We should remove the listener
     };
   }, []);
 

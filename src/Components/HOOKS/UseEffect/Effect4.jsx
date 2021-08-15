@@ -1,43 +1,43 @@
 import React, { useEffect, useState } from "react";
 
 const Effect2 = () => {
-  const [resourcetype, setresourcetype] = useState("users");
+  const [resourceType, setResourceType] = useState("users");
 
-  // We have to unscribe when we fetch data from api or we put any listener we have to remove the listener
-  // using return at the end we unscribe from the api or remove listener
+  // We have to unsubscribe when we fetch data from api or we put any listener we have to remove the listener
+  // using return at the end we unsubscribe from the api or remove listener
 
   useEffect(() => {
     console.log("resource change");
     return () => {
       console.log("return from resource change");
     };
-  }, [resourcetype]);
+  }, [resourceType]);
 
   return (
     <>
       <button
         onClick={() => {
-          setresourcetype("posts");
+          setResourceType("posts");
         }}
       >
         post
       </button>
       <button
         onClick={() => {
-          setresourcetype("comments");
+          setResourceType("comments");
         }}
       >
         comments{" "}
       </button>
       <button
         onClick={() => {
-          setresourcetype("users");
+          setResourceType("users");
         }}
       >
         user{" "}
       </button>
 
-      <h1>{resourcetype}</h1>
+      <h1>{resourceType}</h1>
     </>
   );
 };

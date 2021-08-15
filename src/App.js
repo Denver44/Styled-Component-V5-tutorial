@@ -1,9 +1,11 @@
-import ReactSelect from "./Components/React-select/ReacySelect";
+// import ReactSelect from "./Components/React-select/ReacySelect";
+import Memoized from "./Components/HOOKS/UseMemo/Memoized";
 
 function App() {
   return (
     <div className="App">
-      <ReactSelect />
+      {/* <ReactSelect /> */}
+      <Memoized />
     </div>
   );
 }

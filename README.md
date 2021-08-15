@@ -121,3 +121,35 @@
 
     <span dangerouslySetInnerHTML={{ __html: res.snippet }}></span>
     - Don't use this unless the sources is trusted
+
+
+
+**USESTATE**
+
+    - It should always used inside  a function.
+    - Never used useState in a conditionally Statement like if else or ternary not in loops.
+    - Always use at the top.
+    - React components has a built-in state object. 
+    - The state object is where you store property values that belongs to the component. 
+    - When the state object changes, the component re-renders
+    - UseState always return an array of two value a current state second a function which help us to update the current state.
+    - It will always re-render our component with new value.
+
+
+**IMP NOTE FOR USESTATE**
+
+```
+
+ const func = () => {
+   console.log("It Run everyTime");
+   return 5;
+};
+
+    - It will render always thats why we used function inside a state.
+    - At time of complex computation use below method its safe.
+    - Use this when we have to do complex computation always pass inside a function as it only run for one time and don't make your process slow.
+
+    - Passing an object in UseState.
+    - we have to use SpreadOperator to keep whatever it was as it is and then set the newValue.
+
+```

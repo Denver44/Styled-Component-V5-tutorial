@@ -1,16 +1,17 @@
 import React, { useState } from "react";
 
 // Correct way to update the value of the state. use this function version which is much better and reliable.
+
 const State1 = () => {
-  const [count, setcount] = useState(5);
+  const [count, setCount] = useState(5);
 
   const increment = () => {
-    setcount((prevcount) => prevcount + 1);
-    setcount((prevcount) => prevcount + 1);
+    setCount((pre) => pre + 1);
+    setCount((pre) => pre + 1);
   };
 
   const decrement = () => {
-    setcount((prevcount) => prevcount - 1);
+    setCount((pre) => pre - 1);
   };
 
   return (

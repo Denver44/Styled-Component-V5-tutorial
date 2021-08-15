@@ -6,10 +6,9 @@ const Effect1 = () => {
     setnum((prevnum) => prevnum + 1);
   };
 
-  // This will every time called as the value of the nums is changed.
   useEffect(() => {
     console.log("render");
-  }, [num]);
+  }, [num]); // This will every time called as the value of the nums is changed.
 
   return <button onClick={change}>click me {num}</button>;
 };

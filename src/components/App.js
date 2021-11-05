@@ -1,5 +1,5 @@
 import React from "react";
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle, ThemeProvider } from "styled-components";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
@@ -15,20 +15,27 @@ body{
 
 `;
 
+const theme = {
+  primaryColor: "#f8049c",
+  secondaryColor: "#fdd54f",
+};
+
 const App = () => {
   return (
     <>
-      <GlobalStyle />
-      <Router>
-        <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
-          <Route path="/login">
-            <Login />
-          </Route>
-        </Switch>
-      </Router>
+      <ThemeProvider theme={theme}>
+        <GlobalStyle />
+        <Router>
+          <Switch>
+            <Route exact path="/">
+              <Home />
+            </Route>
+            <Route path="/login">
+              <Login />
+            </Route>
+          </Switch>
+        </Router>
+      </ThemeProvider>
     </>
   );
 };

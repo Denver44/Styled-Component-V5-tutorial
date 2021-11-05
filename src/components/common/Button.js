@@ -2,13 +2,14 @@ import styled, { css } from "styled-components";
 
 export const Button = styled.button`
   color: white;
-  background: ${(p) => (p.primary ? `blue` : `#f8049c`)};
+  background: ${(p) =>
+    p.secondary ? p.theme.primaryColor : p.theme.secondaryColor};
   ${(p) =>
     p.large
       ? css`
-          padding: 16px;
-          border-radius: 8px;
-          font-size: 1.5em;
+          padding: 8px;
+          border-radius: 6px;
+          font-size: 0.9em;
         `
       : css`
           padding: 8px;
@@ -22,6 +23,9 @@ export const Button = styled.button`
   display: block;
   white-space: none;
 
+  &:hover {
+    cursor: pointer;
+  }
   &:disabled {
     background: #eee;
     color: #666;

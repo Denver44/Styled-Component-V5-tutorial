@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { createGlobalStyle, ThemeProvider } from "styled-components";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
-
+import LightTheme from "themes/light";
+import DarkTheme from "themes/dark";
 const GlobalStyle = createGlobalStyle`
 body{
   background: white;
@@ -12,18 +13,13 @@ body{
   color : black;
   font-family: 'Kaushan Script';
 }
-
 `;
 
-const theme = {
-  primaryColor: "#f8049c",
-  secondaryColor: "#fdd54f",
-};
-
 const App = () => {
+  const [theme, setTheme] = useState(LightTheme);
   return (
     <>
-      <ThemeProvider theme={theme}>
+      <ThemeProvider theme={{ ...theme, setTheme }}>
         <GlobalStyle />
         <Router>
           <Switch>

@@ -3,8 +3,9 @@ import { createGlobalStyle, ThemeProvider } from "styled-components";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
-import LightTheme from "themes/light";
-import DarkTheme from "themes/dark";
+import LightTheme from "./themes/light";
+import DarkTheme from "./themes/dark.js";
+
 const GlobalStyle = createGlobalStyle`
 body{
   background: white;

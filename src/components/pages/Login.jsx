@@ -1,14 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from 'react';
 import {
   Input,
   PasswordInput,
   Layout,
   Button,
   Spinner,
-} from "components/common";
-import styled from "styled-components";
+} from 'components/common';
+import styled from 'styled-components';
 
 const Form = styled.form`
+  margin-top: 10px;
   width: 100%;
   max-width: 400px;
   background: white;
@@ -22,12 +23,18 @@ const Form = styled.form`
     text-align: center;
     margin: 10px 0;
   }
+  > ${Button}:first-of-type {
+    margin-top: 10px;
+  }
+  > ${Input}:first-of-type {
+    margin-top: 10px;
+  }
 `;
 
 let timeout;
 
 const Login = () => {
-  const [formData, setFormData] = useState({ username: "", password: "" });
+  const [formData, setFormData] = useState({ username: '', password: '' });
   const [isLoading, setIsLoading] = useState(false);
   const handleInputChange = (e) => {
     e.persist();
@@ -58,6 +65,7 @@ const Login = () => {
           <Spinner success></Spinner>
         ) : (
           <>
+            <span>Login if you have already account</span>
             <Input
               name="username"
               placeholder="Username"
@@ -73,7 +81,7 @@ const Login = () => {
           </>
         )}
         <Button type="submit" disabled={isLoading} large>
-          {isLoading ? "Loading..." : "Login"}
+          {isLoading ? 'Loading...' : 'Login'}
         </Button>
         {!isLoading && (
           <>

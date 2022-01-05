@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 const ToggleWrapper = styled.div`
   width: 50px;
@@ -23,12 +23,12 @@ const Notch = styled.div`
   border-radius: 50%;
   background: white;
   transition: transform 0.1s linear;
-  transform: translate(${(p) => (p.isActive ? "26px" : "1px")});
+  transform: translate(${(p) => (p.isActive ? '26px' : '1px')});
 `;
 
-export const Toggle = ({ isActive }) => {
+export const Toggle = ({ isActive, onToogle }) => {
   return (
-    <ToggleWrapper>
+    <ToggleWrapper onClick={onToogle}>
       <Notch isActive={isActive} />
     </ToggleWrapper>
   );

@@ -1,8 +1,8 @@
-import React from "react";
-import styled from "styled-components";
-import { Link as ReactRouterLink, useLocation } from "react-router-dom";
-import { useState } from "react";
-import { Toggle } from "./Toggle.js";
+import React, { useContext } from 'react';
+import styled, { ThemeContext } from 'styled-components';
+import { Link as ReactRouterLink, useLocation } from 'react-router-dom';
+import { useState } from 'react';
+import { Toggle } from './Toggle.js';
 
 const HeaderWrapper = styled.header`
   height: 60px;
@@ -26,7 +26,7 @@ const MobileMenuIcon = styled.div`
   padding: 5px;
   > div {
     height: 3px;
-    background: black;
+    background: ${(p) => p.theme.bodyFontColor};
     margin: 5px 0;
     width: 100%;
   }
@@ -37,8 +37,8 @@ const MobileMenuIcon = styled.div`
 `;
 
 const Menu = styled.nav`
-  display: ${(p) => (p.isOpen ? "block" : "none")};
-  font-family: "Open Sans";
+  display: ${(p) => (p.isOpen ? 'block' : 'none')};
+  font-family: 'Open Sans';
   position: absolute;
   width: 100%;
   top: 60px;
@@ -46,7 +46,7 @@ const Menu = styled.nav`
   padding: 8px;
   box-sizing: border-box;
   border-bottom: 3px solid ${(p) => p.theme.primaryColor};
-  background: white;
+  background: ${(p) => p.theme.bodyBackgroundColor};
   color: black;
 
   @media (min-width: 768px) {
@@ -68,6 +68,7 @@ const Link = ({ isActive, children, ...props }) => (
 
 const StyledLink = styled(Link)`
   padding: 4px 8px;
+  color: ${(p) => p.theme.bodyFontColor};
   display: block;
   text-align: center;
   box-sizing: border-box;
@@ -78,6 +79,7 @@ const StyledLink = styled(Link)`
 export const Header = () => {
   const { pathname } = useLocation();
   const [menuOpen, setMenuOpen] = useState(false);
+  const { id, setTheme } = useContext(ThemeContext);
 
   return (
     <HeaderWrapper>
@@ -88,13 +90,13 @@ export const Header = () => {
       </MobileMenuIcon>
 
       <Menu isOpen={menuOpen}>
-        <StyledLink to="/" isActive={pathname === "/"}>
+        <StyledLink to="/" isActive={pathname === '/'}>
           Home
         </StyledLink>
-        <StyledLink to="/login" isActive={pathname === "/login"}>
+        <StyledLink to="/login" isActive={pathname === '/login'}>
           Login
         </StyledLink>
-        <Toggle />
+        <Toggle isActive={id === 'dark'} onToogle={setTheme} />
       </Menu>
     </HeaderWrapper>
   );
